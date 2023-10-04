@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmo script</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container all-hidden">
+      <nav class="nav flex">
+        <ul class="nav__list flex">
+          <li class="nav__item">
+            <a href="#description" class="nav__link link">Описание игры</a>
+          </li>
+          <li class="nav__item">
+            <a href="#levels" class="nav__link link">Уровни</a>
+          </li>
+          <li class="nav__item">
+            <a href="#rates" class="nav__link link">Тарифы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#reviews" class="nav__link link">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#partners" class="nav__link link">Партнеры</a>
+          </li>
+          <li class="nav__item">
+            <a href="#profile" class="nav__link link">Профиль</a>
+          </li>
+          <li class="nav__item">
+            <a href="#game" class="nav__link link">Игра</a>
+          </li>
+        </ul>
+        <button class="burger" id="btn-burger">
+          <span class="burger-top burger-line"></span>
+          <span class="burger-middle burger-line"></span>
+          <span class="burger-bottom burger-line"></span>
+        </button>
+      </nav>
+      <div class="header__hero">
+        <h1 class="main-title">
+          Cosmo Script
+        </h1>
+        <h2 class="main-title-note">
+          Научитесь программировать
+          <br />
+          с помощью игры
+        </h2>
+        <div class="hero__btn-box flex">
+          <a href="#game" class="hero__btn flex round link">
+            <span class="hero__btn-round flex round">
+              <span class="hero__btn-text uppercase flex round">
+                Вперед!
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section all-hidden section__description" id="description">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Описание игры
+          </h2>
+          <ul class="descr__steps-list flex">
+            <li class="descr__steps-item descr__greeting">
+              <div class="descr__content">
+                <h3 class="descr__item_title">
+                  Приветствие
+                </h3>
+                <p class="descr__item_text">
+                  Создадим космический корабль, научимся отправлять и принимать сообщения с земли
+                  (Ввод/вывод
+                  данных).
+                </p>
+                <button class="btn btn-free uppercase descr__item_btn">
+                  бесплатный доступ
+                </button>
+              </div>
+            </li>
+            <li class="descr__steps-item descr__names">
+              <div class="descr__content">
+                <h3 class="descr__item_title">
+                  Запоминаем имена
+                </h3>
+                <p class="descr__item_text">
+                  Научимся управлять кораблем и запишем имя капитана корабля (переменные).
+                </p>
+                <button class="btn btn-free uppercase descr__item_btn">
+                  бесплатный доступ
+                </button>
+              </div>
+            </li>
+            <li class="descr__steps-item descr__auto">
+              <div class="descr__content">
+                <h3 class="descr__item_title">
+                  Автопилот
+                </h3>
+                <p class="descr__item_text">
+                  Научимся облетать астероиды и другие корабли (Условия).
+                </p>
+                <button class="btn btn-paid uppercase descr__item_btn">
+                  Доступ по подписке
+                </button>
+              </div>
+            </li>
+            <li class="descr__steps-item descr__auto-plus">
+              <div class="descr__content">
+                <h3 class="descr__item_title">
+                  Автопилот +
+                </h3>
+                <p class="descr__item_text">
+                  Усовершенствуем наш Автопилот с помощью цикла (Цикл).
+                </p>
+                <button class="btn btn-paid uppercase descr__item_btn">
+                  Доступ по подписке
+                </button>
+              </div>
+            </li>
+            <li class="descr__steps-item descr__functions">
+              <div class="descr__content">
+                <h3 class="descr__item_title">
+                  Функции
+                </h3>
+                <p class="descr__item_text">
+                  Подключим новые модули к нашему кораблю (Функции).
+                </p>
+                <button class="btn btn-paid uppercase descr__item_btn">
+                  Доступ по подписке
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="moon planet">
+        <!-- CSS -->
+      </div>
+      <div class="blue-planet planet">
+        <!-- CSS -->
+      </div>
+      <div class="pink-planet planet">
+        <!-- CSS -->
+      </div>
+    </section>
+    <section class="section section__rates none" id="rates">
+      <div class="container section__container">
+        <div class="section__body  flex">
+          <h2 class="section__title rates__title uppercase">
+            Тарифы
+          </h2>
+          <div class="rate__body">
+            <form class="rate__list rates" id="ratesJS">
+              <!-- JS -->
+            </form>
+            <form class="rate__calc flex" id="calc">
+              <legend class="form-title">
+                Рассчитать стоимость тарифа
+              </legend>
+              <div class="total-body flex">
+                <p class="total-text">Количество человек:
+                  <input type="number" class="total-input">
+                </p>
+                <p class="total-text">Стоимоcть тарифа:
+                  <span class="total-cost">
+                    0р
+                  </span>
+                </p>
+              </div>
+              <button type="submit" class="btn total-btn" disabled>
+                Рассчитать
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section__levels none" id="levels">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Уровни
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="section section__reviews none" id="reviews">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Отзывы
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="section section__partners none" id="partners">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Партнеры
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="section section__profile none" id="profile">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Профиль
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="section section__game none" id="game">
+      <div class="container section__container">
+        <div class="section__body flex">
+          <h2 class="section__title uppercase">
+            Игра
+          </h2>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
