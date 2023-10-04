@@ -66,7 +66,7 @@ function getRates(item) {
   rateItem.append(radioCustom);
 }
 
-fetch("https://munchkin.cosmoscript.ru/api/get_tariff")
+fetch("https://github.com/Rob--W/cors-anywhere/https://munchkin.cosmoscript.ru/api/get_tariff")
   .then(res => res.json())
   .then((res) => {
     for (let i = 0; i < res.length; i++) {
