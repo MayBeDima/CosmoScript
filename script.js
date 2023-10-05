@@ -11,7 +11,7 @@ btnBurger.addEventListener('click', () => {
   });
 })
 
-// API
+// API (Get rates)
 
 const rates = document.getElementById('ratesJS');
 const links = document.querySelectorAll('.link');
@@ -33,7 +33,7 @@ links.forEach(e => {
   })
 })
 
-function getRates(item) {
+function createRates(item) {
   let rateItem = document.createElement('label');
   rateItem.setAttribute('for', `${item.name}`);
   rateItem.classList.add('rate__item', 'flex', 'rate__text');
@@ -66,15 +66,16 @@ function getRates(item) {
   rateItem.append(radioCustom);
 }
 
-fetch("https://munchkin.cosmoscript.ru/api/get_tariff")
+fetch('https://munchkin.cosmoscript.ru/api/get_tariff')
   .then(res => res.json())
   .then((res) => {
     for (let i = 0; i < res.length; i++) {
-      getRates(res[i]);
+      createRates(res[i]);
     }
   });
 
-// Price
+
+// Total cost
 
 const totalInput = document.querySelector('.total-input');
 const totalCost = document.querySelector('.total-cost');
@@ -99,3 +100,21 @@ totalForm.addEventListener('submit', (e) => {
     });
 })
 
+// Stars animation
+
+const stars = document.querySelectorAll('.star');
+function getStyleValue(min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
+stars.forEach((e) => {
+  setInterval(() => {
+    e.style.top = `${getStyleValue(0, 90)}%`
+    e.style.left = `${getStyleValue(10, 90)}%`
+    e.classList.remove('none');
+    setTimeout(() => {
+      e.classList.add('none')
+    }, 2900)
+  }, 3000)
+})
